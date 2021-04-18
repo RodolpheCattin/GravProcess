@@ -1,0 +1,9 @@
+%% plot attachment station
+figure('Name',strcat('Attachment - Line No',num2str(attachlist(i,1)),...
+    ' with Line No',num2str(attachlist(i,2))),'NumberTitle','off');
+plot(data1(4,:),data1(5,:),'o',data2(4,:),data2(5,:),'+',data1(4,indice1),data1(5,indice1),'r.');
+xlabel('lon');
+ylabel('lat');
+legend(strcat('Line No',num2str(attachlist(i,1))),...
+    strcat('Line No',num2str(attachlist(i,2))), ...
+    'Attachment point');
