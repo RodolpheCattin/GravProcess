@@ -1,2 +1,2 @@
-# graviity
+# gravity
 Code for gravity processing
