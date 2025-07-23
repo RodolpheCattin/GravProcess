@@ -8,7 +8,7 @@
 strdatagravi=get(fileedit3,'String');
 for i=1:length(gravilines)
     fid=fopen(strcat(num2str(gravilines(i)),strdatagravi),'r');
-    data=textscan(fid, '%12.7f %12.7f %7.4f %8.3f %5.3f %6.1f %6.1f %f %f %d %d %s %11.5f %6.4f %s');
+    data=textscan(fid, '%12.7f %13.7f %7.4f %8.3f %5.3f %6.1f %6.1f %f %f %d %d %s %11.5f %6.4f %s');
     % delete data with a standard deviation > 0.2
     indice=find(data{5}>0.2);
     for j=1:length(data)

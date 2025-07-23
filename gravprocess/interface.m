@@ -1,4 +1,6 @@
 %%  interface control
+s=settings;
+coeffzoom=s.matlab.desktop.Zoom.PersonalValue/100;
 H.scrsz = get(0,'ScreenSize');
 H.figwidth=850;
 H.figheight=700;
@@ -9,8 +11,8 @@ H.loadwidth=300;
 H.loadheight=35;
 H.vdecal=45;
 %% STEP 1 : read all files
-f0=figure('position',[(H.scrsz(3)-H.figwidth)/2,(H.scrsz(4)-H.figheight)/2,H.figwidth,H.figheight],...
-    'name','GravProcess 1.3','NumberTitle','off');
+f0=figure('position',[(H.scrsz(3)-H.figwidth*coeffzoom)/2,(H.scrsz(4)-H.figheight*coeffzoom)/2,H.figwidth*coeffzoom,H.figheight*coeffzoom],...
+    'name','GravProcess 1.4','NumberTitle','off');
 filetext1=uicontrol('position',[(H.figwidth-H.stepwidth)/2 H.figheight-40 H.stepwidth H.stepheight],...
     'string','STEP 1 - INPUT FILES');
 % lines
